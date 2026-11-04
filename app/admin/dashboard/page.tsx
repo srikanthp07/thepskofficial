@@ -506,9 +506,36 @@ const youtubeEngagement =
             <p style={{ color: "#9ca3af", marginTop: 5 }}>
               @thepskofficial
             </p>
-            <p style={{ color: "#fbbf24", marginTop: 15 }}>
-              Not connected
-            </p>
+           <p
+  style={{
+    color: youtubeLoading
+      ? "#fbbf24"
+      : youtubeError
+        ? "#f87171"
+        : youtubeChannel
+          ? "#34d399"
+          : "#fbbf24",
+    marginTop: 15,
+    fontWeight: "bold",
+  }}
+>
+  {youtubeLoading
+    ? "Connecting..."
+    : youtubeError
+      ? "Connection failed"
+      : youtubeChannel
+        ? "✓ Connected"
+        : "Not connected"}
+</p>
+
+{youtubeChannel && (
+  <div style={{ marginTop: 12, lineHeight: 1.8 }}>
+    <p>Channel: {youtubeChannel.title}</p>
+    <p>Subscribers: {formatNumber(youtubeChannel.subscribers)}</p>
+    <p>Total Views: {formatNumber(youtubeChannel.totalViews)}</p>
+    <p>Videos: {formatNumber(youtubeChannel.videoCount)}</p>
+  </div>
+)}
             <p style={{ color: "#9ca3af", fontSize: 13, lineHeight: 1.8 }}>
               Subscribers · Views · Watch Time
               <br />
