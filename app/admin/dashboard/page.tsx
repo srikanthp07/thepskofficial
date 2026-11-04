@@ -365,13 +365,15 @@ const [youtubeError, setYoutubeError] = useState("");
           : aValue - bValue;
       });
   }, [socialPosts, platformFilter, periodFilter, sortMetric, sortOrder]);
-  useEffect(() => {
+  
+useEffect(() => {
   async function loadYouTube() {
     try {
       setYoutubeLoading(true);
       setYoutubeError("");
 
       const response = await fetch("/api/youtube");
+
       if (!response.ok) {
         throw new Error("YouTube data load avvaledu.");
       }
@@ -388,13 +390,13 @@ const [youtubeError, setYoutubeError] = useState("");
           views: number;
           likes: number;
           comments: number;
+          thumbnail?: string | null;
         }) => ({
           id: video.id,
           platform: "YouTube" as const,
           title: video.title,
           thumbnail: video.thumbnail || null,
           publishedAt: video.publishedAt,
-          
           views: video.views,
           likes: video.likes,
           comments: video.comments,
@@ -414,6 +416,7 @@ const [youtubeError, setYoutubeError] = useState("");
 
   loadYouTube();
 }, []);
+
 
   const published = films.filter((film) => film.is_published).length;
   const youtubeTotals = filteredSocialPosts
