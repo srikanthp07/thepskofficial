@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101114">
+  <meta name="description" content="THE PSK FILMS — Independent filmmaker and visual storyteller, Perumalla Shree Kanth.">
+  <title>THE PSK FILMS | Perumalla Shree Kanth</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=JetBrains+Mono:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Material+Symbols+Outlined:wght@100..700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            ink: "#101114", panel: "#17191d", panel2: "#202329",
+            gold: "#eab65c", cream: "#eee9df", muted: "#aaa397",
+            line: "#34363b"
+          },
+          fontFamily: {
+            display: ["Bodoni Moda", "serif"],
+            sans: ["Plus Jakarta Sans", "sans-serif"],
+            mono: ["JetBrains Mono", "monospace"]
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background:#101114; color:#eee9df; }
+    ::selection { background:#eab65c; color:#17191d; }
+    .film-grain { background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.13'/%3E%3C/svg%3E"); }
+    .gold-line { background:linear-gradient(90deg,transparent,#eab65c,transparent); }
+    .film-card[hidden] { display:none !important; }
+    .nav-link { transition:color .2s ease; }
+    .nav-link:hover { color:#eab65c; }
+    .poster-fallback { background:radial-gradient(circle at 50% 40%,#34302a 0,#1c1d20 45%,#111216 100%); }
+  </style>
+</head>
+
+<body class="font-sans antialiased">
+  <!-- HEADER -->
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-ink/90 backdrop-blur-xl">
+    <div class="mx-auto flex h-[82px] max-w-[1500px] items-center justify-between px-5 md:px-10">
+      <a href="#home" class="flex min-w-0 items-center gap-3">
+        <img
+          src="https://lh3.googleusercontent.com/aida/AEtjO1UigIyBFK1EvaDbfnD8Wn60rFVLerQktSu5He24u6gkcp7H7xqYEBfUuQx4TI5mteWpazvC970WVgTIv1B4m1EZTsvgyMHLYxQFAwr9Wc-TaORV7v0bxXmd4yZ25G4kbOoTQJCzzi_BMkWmyZlgvBQXZ4WjD0woqw-eZaRl2kyM6wmTlU4xm8NhPrV01CbFNMlXnX7LmIYQu5bLHN7n8FYqIP4xo4cwVAYpZyOedbsm"
+          alt="THE PSK FILMS logo" class="h-10 w-10 shrink-0 object-contain"
+          onerror="this.style.display='none'">
+        <span class="min-w-0">
+          <span class="block font-display text-xl uppercase tracking-[.13em] text-cream sm:text-2xl">THE PSK FILMS</span>
+          <span class="mt-0.5 block font-mono text-[9px] uppercase tracking-[.2em] text-gold sm:text-[10px]">PERUMALLA SHREE KANTH</span>
+        </span>
+      </a>
+
+      <nav class="hidden items-center gap-7 lg:flex">
+        <a class="nav-link text-xs uppercase tracking-[.16em] text-muted" href="#films">Films</a>
+        <a class="nav-link text-xs uppercase tracking-[.16em] text-muted" href="#about">About</a>
+        <a class="nav-link text-xs uppercase tracking-[.16em] text-muted" href="#behind-scenes">Behind the scenes</a>
+        <a class="nav-link text-xs uppercase tracking-[.16em] text-muted" href="#contact">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://youtube.com/@thepskofficial" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="hidden text-muted transition hover:text-gold sm:block">
+          <span class="material-symbols-outlined">smart_display</span>
+        </a>
+        <a href="https://instagram.com/thepsk_offl" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="hidden text-muted transition hover:text-gold sm:block">
+          <span class="material-symbols-outlined">photo_camera</span>
+        </a>
+        <a href="mailto:thepskofficial@gmail.com" class="rounded-sm bg-gold px-4 py-2.5 text-[10px] font-semibold uppercase tracking-[.15em] text-ink transition hover:bg-cream">Contact PSK</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="home" class="pt-[82px]">
+    <!-- HERO -->
+    <section class="relative isolate min-h-[620px] overflow-hidden border-b border-white/10">
+      <div class="absolute inset-0 -z-20 bg-[radial-gradient(ellipse_at_70%_20%,rgba(234,182,92,.17),transparent_40%),linear-gradient(120deg,#101114,#191a1e_55%,#101114)]"></div>
+      <div class="film-grain pointer-events-none absolute inset-0 -z-10 opacity-30"></div>
+      <div class="mx-auto grid min-h-[620px] max-w-[1500px] items-center gap-12 px-5 py-20 md:px-10 lg:grid-cols-[1.2fr_.8fr]">
+        <div class="max-w-4xl">
+          <p class="mb-6 font-mono text-[10px] uppercase tracking-[.28em] text-gold">Independent filmmaker · Hyderabad, India</p>
+          <h1 class="font-display text-5xl leading-[1.08] tracking-[-.04em] text-cream sm:text-6xl lg:text-7xl">
+            Stories shaped<br>through <i class="font-normal text-gold">the lens.</i>
+          </h1>
+          <p class="mt-7 max-w-2xl text-sm leading-7 text-muted sm:text-base">
+            I’m <strong class="font-medium text-cream">Perumalla Shree Kanth</strong> — filmmaker and visual storyteller behind THE PSK FILMS. This is a space for my films, visual experiments, and the stories I’m working to bring to life.
+          </p>
+          <div class="mt-9 flex flex-wrap gap-3">
+            <a href="#films" class="bg-gold px-6 py-3 text-[10px] font-semibold uppercase tracking-[.17em] text-ink transition hover:bg-cream">Explore my work</a>
+            <a href="https://youtube.com/@thepskofficial" target="_blank" rel="noopener noreferrer" class="border border-white/20 px-6 py-3 text-[10px] font-semibold uppercase tracking-[.17em] text-cream transition hover:border-gold hover:text-gold">Watch on YouTube ↗</a>
+          </div>
+        </div>
+
+        <div class="relative mx-auto w-full max-w-md">
+          <div class="absolute -inset-5 border border-gold/20"></div>
+          <div class="relative flex aspect-[4/5] flex-col items-center justify-center overflow-hidden border border-white/10 bg-gradient-to-br from-[#28251f] via-[#191a1e] to-[#101114] p-8 text-center">
+            <div class="absolute inset-0 film-grain opacity-30"></div>
+            <div class="relative">
+              <div class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full border border-gold/50 text-gold">
+                <span class="font-display text-4xl">P</span>
+              </div>
+              <p class="font-mono text-[9px] uppercase tracking-[.3em] text-gold">A filmmaker’s portfolio</p>
+              <h2 class="mt-4 font-display text-3xl uppercase tracking-[.08em] text-cream">THE PSK FILMS</h2>
+              <div class="mx-auto my-5 h-px w-24 gold-line"></div>
+              <p class="font-mono text-[10px] uppercase tracking-[.18em] text-muted">Perumalla Shree Kanth</p>
+              <p class="mt-8 font-mono text-[9px] uppercase tracking-[.22em] text-muted">Imagine · Create · Tell stories</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="absolute bottom-0 left-0 right-0 h-px gold-line"></div>
+    </section>
+
+    <!-- FILM LIBRARY -->
+    <section id="films" class="mx-auto max-w-[1500px] px-5 py-20 md:px-10">
+      <div class="mb-9 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+        <div>
+          <p class="font-mono text-[10px] uppercase tracking-[.25em] text-gold">Selected work</p>
+          <h2 class="mt-3 font-display text-4xl uppercase tracking-[-.02em] text-cream sm:text-5xl">Filmography</h2>
+          <p class="mt-3 max-w-xl text-sm leading-6 text-muted">Films and videos published by THE PSK FILMS.</p>
+        </div>
+        <div class="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+          <input id="film-search" type="search" placeholder="Search films..." class="min-w-0 border border-white/10 bg-panel px-4 py-3 text-xs text-cream outline-none placeholder:text-muted focus:border-gold sm:w-64">
+          <select id="film-filter" class="border border-white/10 bg-panel px-4 py-3 text-xs text-cream outline-none focus:border-gold">
+            <option value="all">All categories</option>
+            <option value="travel">Travel</option>
+            <option value="narrative">Short films</option>
+            <option value="commercial">Commercial</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mb-6 flex items-center justify-between border-y border-white/10 py-3">
+        <span class="font-mono text-[9px] uppercase tracking-[.2em] text-muted">The PSK Films collection</span>
+        <span id="film-count" class="font-mono text-[9px] uppercase tracking-[.2em] text-gold">Loading</span>
+      </div>
+
+      <div id="psk-film-grid" class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div id="psk-film-status" class="col-span-full border border-white/10 bg-panel p-8 text-center text-sm text-muted">Loading published films...</div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="border-y border-white/10 bg-panel">
+      <div class="mx-auto grid max-w-[1500px] gap-10 px-5 py-20 md:px-10 lg:grid-cols-[.7fr_1.3fr]">
+        <div>
+          <p class="font-mono text-[10px] uppercase tracking-[.25em] text-gold">Behind the name</p>
+          <h2 class="mt-3 font-display text-4xl uppercase text-cream sm:text-5xl">About PSK</h2>
+        </div>
+        <div class="max-w-3xl">
+          <p class="font-display text-2xl leading-relaxed text-cream sm:text-3xl">“Every frame has a feeling. Every story deserves to be told.”</p>
+          <p class="mt-7 text-sm leading-7 text-muted">
+            I’m <strong class="font-medium text-cream">Perumalla Shree Kanth</strong>, the creator of THE PSK FILMS. I’m interested in cinema, visual storytelling, people, places, and the small moments that can become powerful stories.
+          </p>
+          <p class="mt-4 text-sm leading-7 text-muted">
+            This portfolio will grow with my work — from short films and filmmaking experiments to travel visuals and behind-the-scenes moments.
+          </p>
+          <p class="mt-8 font-mono text-[10px] uppercase tracking-[.2em] text-gold">Directed & created by Perumalla Shree Kanth</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BTS -->
+    <section id="behind-scenes" class="mx-auto max-w-[1500px] px-5 py-20 md:px-10">
+      <div class="mb-9">
+        <p class="font-mono text-[10px] uppercase tracking-[.25em] text-gold">The creative process</p>
+        <h2 class="mt-3 font-display text-4xl uppercase text-cream sm:text-5xl">Behind the scenes</h2>
+        <p class="mt-3 max-w-2xl text-sm leading-6 text-muted">Production stills, location photographs, and moments from the making of each project will appear here.</p>
+      </div>
+      <div class="grid grid-cols-2 gap-3 lg:grid-cols-4">
+        <div class="poster-fallback flex aspect-square items-center justify-center border border-white/10 p-4 text-center">
+          <div><span class="material-symbols-outlined text-3xl text-gold">videocam</span><p class="mt-3 font-mono text-[9px] uppercase tracking-[.15em] text-muted">On set</p></div>
+        </div>
+        <div class="poster-fallback flex aspect-square items-center justify-center border border-white/10 p-4 text-center">
+          <div><span class="material-symbols-outlined text-3xl text-gold">movie_edit</span><p class="mt-3 font-mono text-[9px] uppercase tracking-[.15em] text-muted">Post production</p></div>
+        </div>
+        <div class="poster-fallback flex aspect-square items-center justify-center border border-white/10 p-4 text-center">
+          <div><span class="material-symbols-outlined text-3xl text-gold">landscape</span><p class="mt-3 font-mono text-[9px] uppercase tracking-[.15em] text-muted">Locations</p></div>
+        </div>
+        <div class="poster-fallback flex aspect-square items-center justify-center border border-white/10 p-4 text-center">
+          <div><span class="material-symbols-outlined text-3xl text-gold">photo_camera</span><p class="mt-3 font-mono text-[9px] uppercase tracking-[.15em] text-muted">On camera</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="border-t border-white/10 bg-[#151619]">
+      <div class="mx-auto max-w-[1500px] px-5 py-20 text-center md:px-10">
+        <p class="font-mono text-[10px] uppercase tracking-[.25em] text-gold">Let’s work together</p>
+        <h2 class="mx-auto mt-4 max-w-3xl font-display text-4xl uppercase leading-tight text-cream sm:text-6xl">Have a story to tell?</h2>
+        <p class="mx-auto mt-5 max-w-xl text-sm leading-7 text-muted">For collaborations, short-film projects, creative work, or enquiries, get in touch.</p>
+        <a href="mailto:thepskofficial@gmail.com" class="mt-8 inline-flex items-center gap-2 bg-gold px-7 py-4 text-[10px] font-semibold uppercase tracking-[.17em] text-ink transition hover:bg-cream">
+          <span class="material-symbols-outlined text-base">mail</span> Email Perumalla Shree Kanth
+        </a>
+        <div class="mt-10 flex flex-wrap justify-center gap-7 font-mono text-[9px] uppercase tracking-[.16em] text-muted">
+          <a class="transition hover:text-gold" href="https://youtube.com/@thepskofficial" target="_blank" rel="noopener noreferrer">YouTube · @thepskofficial</a>
+          <a class="transition hover:text-gold" href="https://instagram.com/thepsk_offl" target="_blank" rel="noopener noreferrer">Instagram · @thepsk_offl</a>
+          <a class="transition hover:text-gold" href="mailto:thepskofficial@gmail.com">thepskofficial@gmail.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 bg-ink">
+    <div class="mx-auto flex max-w-[1500px] flex-col gap-6 px-5 py-8 md:flex-row md:items-center md:justify-between md:px-10">
+      <div class="flex items-center gap-3">
+        <img
+          src="https://lh3.googleusercontent.com/aida/AEtjO1UigIyBFK1EvaDbfnD8Wn60rFVLerQktSu5He24u6gkcp7H7xqYEBfUuQx4TI5mteWpazvC970WVgTIv1B4m1EZTsvgyMHLYxQFAwr9Wc-TaORV7v0bxXmd4yZ25G4kbOoTQJCzzi_BMkWmyZlgvBQXZ4WjD0woqw-eZaRl2kyM6wmTlU4xm8NhPrV01CbFNMlXnX7LmIYQu5bLHN7n8FYqIP4xo4cwVAYpZyOedbsm"
+          alt="THE PSK FILMS logo" class="h-9 w-9 object-contain" onerror="this.style.display='none'">
+        <div>
+          <p class="font-display text-lg uppercase tracking-[.12em] text-cream">THE PSK FILMS</p>
+          <p class="font-mono text-[9px] uppercase tracking-[.17em] text-gold">Perumalla Shree Kanth</p>
+        </div>
+      </div>
+      <p class="font-mono text-[9px] uppercase tracking-[.14em] text-muted">© <span id="year"></span> THE PSK FILMS · All rights reserved</p>
+      <a href="#home" class="font-mono text-[9px] uppercase tracking-[.15em] text-muted transition hover:text-gold">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    (() => {
+      // Browser-side publishable key only. Never place a Supabase service_role/secret key here.
+      const SUPABASE_URL = "https://gpuhafmxsykdzwrqhplt.supabase.co";
+      const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_u6XNew6kdkbTF6cUS6V1xA_sSnjn63f";
+
+      const grid = document.getElementById("psk-film-grid");
+      const status = document.getElementById("psk-film-status");
+      const count = document.getElementById("film-count");
+      const search = document.getElementById("film-search");
+      const filter = document.getElementById("film-filter");
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      const escapeHTML = value => String(value ?? "").replace(/[&<>"']/g, char => ({
+        "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+      }[char]));
+
+      let films = [];
+
+      function renderFilms() {
+        const query = search.value.trim().toLowerCase();
+        const category = filter.value;
+        const shown = films.filter(film => {
+          const text = [film.title, film.description, film.category, film.production].join(" ").toLowerCase();
+          const matchesSearch = !query || text.includes(query);
+          const rawCategory = String(film.category || "").toLowerCase();
+          const matchesCategory = category === "all" ||
+            (category === "other" ? !["travel", "narrative", "commercial"].includes(rawCategory) : rawCategory.includes(category));
+          return matchesSearch && matchesCategory;
+        });
+
+        count.textContent = `${shown.length} ${shown.length === 1 ? "FILM" : "FILMS"}`;
+
+        if (!shown.length) {
+          grid.innerHTML = '<div class="col-span-full border border-white/10 bg-panel p-8 text-center text-sm text-muted">No films match this search yet.</div>';
+          return;
+        }
+
+        grid.innerHTML = shown.map(film => {
+          const title = escapeHTML(film.title);
+          const description = escapeHTML(film.description || "More details coming soon.");
+          const categoryLabel = escapeHTML(film.category || "Film");
+          const year = escapeHTML(film.release_year || "");
+          const production = escapeHTML(film.production || "THE PSK FILMS");
+          // Bucket is private; don't expose its internal storage path as a public image URL.
+          const posterMarkup = film.poster_url && /^https?:\/\//i.test(film.poster_url)
+            ? `<img src="${escapeHTML(film.poster_url)}" alt="${title} poster" class="h-full w-full object-cover" loading="lazy">`
+            : `<div class="poster-fallback flex h-full min-h-48 items-center justify-center"><span class="font-display text-2xl uppercase tracking-[.15em] text-gold/80">THE PSK FILMS</span></div>`;
+          const videoMarkup = film.video_url && /^https?:\/\//i.test(film.video_url)
+            ? `<a href="${escapeHTML(film.video_url)}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-[9px] font-semibold uppercase tracking-[.16em] text-gold hover:text-cream">Watch film <span aria-hidden="true">↗</span></a>`
+            : `<span class="text-[9px] uppercase tracking-[.14em] text-muted">Details coming soon</span>`;
+
+          return `
+            <article class="film-card overflow-hidden border border-white/10 bg-panel transition duration-300 hover:-translate-y-1 hover:border-gold/50">
+              <div class="relative aspect-[16/10] overflow-hidden bg-ink">
+                ${posterMarkup}
+                <span class="absolute left-4 top-4 bg-ink/85 px-3 py-1.5 font-mono text-[9px] uppercase tracking-[.14em] text-gold">${categoryLabel}</span>
+              </div>
+              <div class="p-6">
+                <div class="flex items-start justify-between gap-4">
+                  <h3 class="font-display text-2xl uppercase leading-tight text-cream">${title}</h3>
+                  <span class="shrink-0 font-mono text-[10px] text-muted">${year}</span>
+                </div>
+                <p class="mt-4 min-h-12 text-xs leading-6 text-muted">${description}</p>
+                <div class="mt-6 flex items-center justify-between gap-3 border-t border-white/10 pt-4">
+                  <span class="font-mono text-[9px] uppercase tracking-[.12em] text-muted">${production}</span>
+                  ${videoMarkup}
+                </div>
+              </div>
+            </article>`;
+        }).join("");
+      }
+
+      async function loadFilms() {
+        if (!window.supabase || !SUPABASE_URL || !SUPABASE_PUBLISHABLE_KEY) {
+          status.textContent = "Film library connection is not configured.";
+          return;
+        }
+
+        const db = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+        const { data, error } = await db.from("Films")
+          .select("title, description, poster_url, video_url, category, production, release_year")
+          .eq("is_published", true)
+          .order("release_year", { ascending: false });
+
+        if (error) {
+          status.textContent = "Published films are temporarily unavailable. Please check the Supabase table permissions.";
+          count.textContent = "UNAVAILABLE";
+          console.error("PSK Films:", error.message);
+          return;
+        }
+
+        films = data || [];
+        if (!films.length) {
+          status.textContent = "No published films yet. Once a film is published from the admin dashboard, it will appear here.";
+          count.textContent = "0 FILMS";
+          return;
+        }
+
+        status.remove();
+        renderFilms();
+      }
+
+      search.addEventListener("input", renderFilms);
+      filter.addEventListener("change", renderFilms);
+      loadFilms();
+    })();
+  </script>
+</body>
+</html>

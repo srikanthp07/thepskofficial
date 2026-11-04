@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-surface-variant": "#d4c4b0", "outline-variant": "#504535", "on-primary-fixed-variant": "#604100", "on-error": "#690005", "on-secondary-fixed-variant": "#39485a", "surface-bright": "#38393c", "surface-container-high": "#292a2d", "on-primary": "#432c00", "secondary-fixed": "#d4e4fa", "on-tertiary-container": "#683b00", "surface-container": "#1f1f23", "tertiary-fixed": "#ffdcbe", "outline": "#9d8f7c", "error": "#ffb4ab", "inverse-primary": "#7e5700", "primary": "#ffc665", "on-tertiary-fixed": "#2c1600", "primary-container": "#e5a93c", "secondary-container": "#39485a", "tertiary-fixed-dim": "#ffb86f", "surface-dim": "#121316", "secondary-fixed-dim": "#b9c8de", "on-secondary-container": "#a7b6cc", "surface-variant": "#343538", "surface-tint": "#fabc4d", "on-primary-fixed": "#281900", "secondary": "#b9c8de", "background": "#121316", "surface-container-low": "#1b1b1f", "on-surface": "#e3e2e6", "surface": "#121316", "on-primary-container": "#5e4000", "on-error-container": "#ffdad6", "tertiary-container": "#f1a34e", "tertiary": "#ffc48a", "on-background": "#e3e2e6", "inverse-on-surface": "#303034", "error-container": "#93000a", "surface-container-lowest": "#0d0e11", "inverse-surface": "#e3e2e6", "on-tertiary": "#4a2800", "on-secondary": "#233143", "on-tertiary-fixed-variant": "#693c00", "primary-fixed-dim": "#fabc4d", "on-secondary-fixed": "#0d1c2d", "primary-fixed": "#ffdead", "surface-container-highest": "#343538" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-lg": "1.75rem", "gutter": "1.5rem", "space-xl": "3rem", "margin": "3rem", "space-sm": "0.5rem", "margin-sm": "1.25rem", "gutter-sm": "1rem", "space-md": "1rem", "space-2xl": "5rem", "space-xs": "0.25rem" }, "fontFamily": { "body-lg": ["Plus Jakarta Sans"], "headline-md": ["Bodoni Moda"], "display-xl-mobile": ["Bodoni Moda"], "title-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Bodoni Moda"], "body-sm": ["Plus Jakarta Sans"], "headline-sm": ["Bodoni Moda"], "label-md": ["JetBrains Mono"], "title-md": ["Plus Jakarta Sans"], "label-sm": ["JetBrains Mono"], "headline-lg": ["Bodoni Moda"], "body-md": ["Plus Jakarta Sans"], "display-xl": ["Bodoni Moda"] }, "fontSize": { "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-md": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "display-xl-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "title-lg": ["20px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-sm": ["24px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "500" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "500" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.12em", "fontWeight": "500" }], "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "400" }], "display-xl": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.03em", "fontWeight": "700" }] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between py-6 px-4 shadow-[1px_0_0_rgba(148,163,184,0.08)]"><div class="flex flex-col gap-6"><div class="flex items-center gap-3 px-3"><div class="w-9 h-9 rounded bg-surface-container-high flex items-center justify-center text-primary font-headline-sm text-headline-sm font-bold tracking-widest shadow-[0_0_16px_rgba(229,169,60,0.15)]">P</div><div class="flex flex-col"><span class="font-headline-sm text-title-md font-bold tracking-wider text-on-surface uppercase">PSK Films</span><span class="font-label-sm text-label-sm tracking-widest text-on-surface-variant uppercase">Creator Studio 4K</span></div></div><div class="px-3 py-2 rounded bg-surface-container-low flex items-center justify-between"><div class="flex items-center gap-2"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span></span><span class="font-label-sm text-label-sm text-on-surface font-medium uppercase tracking-wider">Node 01 // 4K Live</span></div><span class="font-label-sm text-label-sm text-primary uppercase font-bold">PROD</span></div><nav class="flex flex-col gap-1" data-active-classes="bg-surface-container-high text-primary font-title-md font-semibold"><a class="flex items-center gap-3 px-3 py-2.5 rounded font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span>Overview</a><a class="flex items-center gap-3 px-3 py-2.5 rounded font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="movies-films-manager" href="#"><span class="material-symbols-outlined text-[18px]">movie</span>Movies &amp; Films</a><a class="flex items-center gap-3 px-3 py-2.5 rounded font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="future-works-slate" href="#"><span class="material-symbols-outlined text-[18px]">view_timeline</span>Future Slate</a><a class="flex items-center gap-3 px-3 py-2.5 rounded font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="media-photo-library" href="#"><span class="material-symbols-outlined text-[18px]">perm_media</span>Media Library</a><a class="flex items-center gap-3 px-3 py-2.5 rounded font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="social-analytics" href="#"><span class="material-symbols-outlined text-[18px]">insights</span>Social Telemetry</a><a class="flex items-center gap-3 px-3 py-2.5 rounded font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="website-traffic" href="#"><span class="material-symbols-outlined text-[18px]">monitoring</span>Audience Traffic</a><a class="flex items-center gap-3 px-3 py-2.5 rounded font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="supabase-settings" href="#"><span class="material-symbols-outlined text-[18px]">database</span>Supabase Core</a></nav></div><div class="flex flex-col gap-3 px-3 pt-4 bg-surface-container-lowest"><div class="flex items-center justify-between text-on-surface-variant"><span class="font-label-sm text-label-sm tracking-wider uppercase">Telemetry Rate</span><span class="font-label-sm text-label-sm text-primary">24.000 FPS</span></div><div class="w-full h-1 bg-surface-container-high rounded overflow-hidden"><div class="h-full bg-primary w-3/4"></div></div><div class="flex items-center justify-between pt-2"><span class="font-label-sm text-label-sm text-outline">DIRECTOR EDITION</span><span class="font-label-sm text-label-sm text-on-surface-variant">v3.4.1</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 flex items-center justify-between px-8 shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="flex items-center gap-3"><span class="font-label-sm text-label-sm uppercase text-outline tracking-wider">STUDIO</span><span class="text-outline font-label-sm text-label-sm">/</span><span class="font-label-sm text-label-sm uppercase text-primary font-medium tracking-wider">PORTAL CONSOLE</span></div><div class="flex items-center gap-4"><a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-variant transition-colors font-label-md text-label-md uppercase tracking-wider" href="#"><span class="material-symbols-outlined text-[15px]">open_in_new</span>View Public Site</a><button class="w-9 h-9 rounded bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-1.5 h-1.5 rounded-full bg-primary"></span></button><div class="h-5 w-px bg-surface-variant mx-1"></div><div class="flex items-center gap-3 pl-1"><div class="flex flex-col text-right"><span class="font-body-sm text-body-sm font-semibold text-on-surface leading-tight">PSK</span><span class="font-label-sm text-label-sm text-primary tracking-widest leading-none uppercase">DIRECTOR</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1WxHWXK_sHil8k_gIkVEvM07YySnlE4haboKUXyxbTGvqAYJwcxr3vDIxnBum0WnIDR55mkYRVP3K2sWVakKnmapzyP1EcISm6yR09DEqmvF4epgo7v0yz1B4bmzt59Mi9e2adtg_DK_QhW6JDNpgnkHFfPjSBzwI6FNX5GCH9ZGHy1JsZjTKnWnuFTJZz1J4L50kqXANmE5H1Q_lii60nfydUoUfLRVkGLFDr77ZN4W4FUhKB1UVplrrs"/></div></div></header><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="p-8 max-w-[1728px] mx-auto w-full flex flex-col gap-10">
+<!-- Admin Security Node Header Strip -->
+<div class="bg-surface-container-low rounded-xl p-6 shadow-xl relative overflow-hidden">
+<div class="absolute -right-16 -top-16 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 relative z-10">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-3">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest bg-surface-container-high px-2.5 py-1 rounded">SYS_KEY_STORE_V4</span>
+<span class="inline-flex items-center gap-1.5 font-label-sm text-label-sm text-secondary bg-surface-container px-2.5 py-1 rounded">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+              MFA HARDWARE KEY ACTIVE
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant/80">POSTGRES 15.4 // SUPABASE CLOUD</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Admin Security Node // Auth &amp; RLS Policies</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-2xl">
+            Hardened access telemetry, Zero-Trust database row isolation, and encrypted server-side social keystores for creator production environments.
+          </p>
+</div>
+<div class="flex flex-wrap items-center gap-4">
+<!-- Session TTL & Guard Card -->
+<div class="bg-surface-container px-4 py-3 rounded-lg flex items-center gap-3 shadow-sm">
+<div class="flex flex-col text-left">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">SESSION TTL GUARD</span>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-primary font-bold" id="session-countdown">14:52</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">AUTO-LOCK (15M IDLE)</span>
+</div>
+</div>
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">timer</span>
+</div>
+</div>
+<!-- Superadmin Identity Pill -->
+<div class="bg-surface-container-high px-4 py-3 rounded-lg flex items-center gap-3.5">
+<div class="w-10 h-10 rounded bg-primary/10 flex items-center justify-center text-primary font-headline-sm text-headline-sm font-semibold">
+              PSK
+            </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface leading-snug">Director PSK</span>
+<span class="bg-primary-container text-on-primary-container font-label-sm text-label-sm px-1.5 py-0.5 rounded font-bold uppercase">SUPERADMIN</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-normal">thepskofficial@gmail.com</span>
+</div>
+</div>
+<!-- Immediate Lock Console Trigger -->
+<button class="bg-surface-variant hover:bg-error-container text-error hover:text-on-error-container font-label-md text-label-md px-4 py-3 rounded transition-all flex items-center gap-2 group shadow-sm" id="lock-console-btn">
+<span class="material-symbols-outlined text-[18px] group-hover:scale-110 transition-transform">lock_clock</span>
+<span>LOCK CONSOLE NOW</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Security & RLS Status Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1: Supabase RLS -->
+<div class="bg-surface-container-low rounded-xl p-6 shadow-xl flex flex-col justify-between gap-6 relative group overflow-hidden">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">shield_lock</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container text-primary px-2.5 py-1 rounded font-bold tracking-wider">
+              ZERO LEAKAGE VERIFIED
+            </span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">DATABASE POLICY INTEGRITY</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mt-1">Supabase RLS Enforced</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            All tables enforce strict Row Level Security. Direct public API keys lack read or write scopes on proprietary film metadata, revenue records, and inquiry logs.
+          </p>
+</div>
+<div class="flex flex-col gap-3 pt-4 bg-surface-container-lowest/60 -mx-6 -mb-6 p-6 rounded-b-xl">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">8 OF 8 CRITICAL TABLES SHIELDED</span>
+<span class="text-primary font-semibold">100% COVERAGE</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded overflow-hidden">
+<div class="h-full bg-primary w-full"></div>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="font-label-sm text-label-sm px-2 py-0.5 bg-surface-container rounded text-secondary">films</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 bg-surface-container rounded text-secondary">future_slate</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 bg-surface-container rounded text-secondary">media_assets</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 bg-surface-container rounded text-secondary">social_tokens</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 bg-surface-container rounded text-secondary">+4 more</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Social API Vault -->
+<div class="bg-surface-container-low rounded-xl p-6 shadow-xl flex flex-col justify-between gap-6 relative group overflow-hidden">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">key</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container text-secondary px-2.5 py-1 rounded font-bold tracking-wider">
+              AES-256 GCM
+            </span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">SECURE ENVIRONMENT STORE</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mt-1">Social API Token Vault</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Keystores are isolated to high-entropy runtime servers. Automated rotation schedules run via private background workers.
+          </p>
+</div>
+<div class="flex flex-col gap-3 pt-4 bg-surface-container-lowest/60 -mx-6 -mb-6 p-6 rounded-b-xl">
+<div class="bg-surface-container px-3 py-2 rounded flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[15px] text-primary">visibility_off</span>
+<span class="font-label-sm text-label-sm text-on-surface">Client Bundle Exclusion</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">STRICT SERVER-ONLY</span>
+</div>
+<div class="grid grid-cols-2 gap-2 font-label-sm text-label-sm">
+<div class="bg-surface-container/60 p-2 rounded flex items-center justify-between">
+<span class="text-on-surface-variant">YouTube OAuth2</span>
+<span class="text-primary font-bold">200 OK</span>
+</div>
+<div class="bg-surface-container/60 p-2 rounded flex items-center justify-between">
+<span class="text-on-surface-variant">IG Graph API</span>
+<span class="text-primary font-bold">TOKEN SYNC</span>
+</div>
+<div class="bg-surface-container/60 p-2 rounded flex items-center justify-between">
+<span class="text-on-surface-variant">X API v2</span>
+<span class="text-primary font-bold">ACTIVE</span>
+</div>
+<div class="bg-surface-container/60 p-2 rounded flex items-center justify-between">
+<span class="text-on-surface-variant">LinkedIn v2</span>
+<span class="text-primary font-bold">RESTRICTED</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3: Middleware Gate -->
+<div class="bg-surface-container-low rounded-xl p-6 shadow-xl flex flex-col justify-between gap-6 relative group overflow-hidden">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">router</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container text-primary px-2.5 py-1 rounded font-bold tracking-wider">
+              EDGE PROXY RUNNING
+            </span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">ZERO-TRUST ROUTE GUARD</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mt-1">Next.js Middleware Gate</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Edge router intercepts all requests under <code class="text-primary font-label-sm text-label-sm bg-surface-container px-1 py-0.5 rounded">/admin/*</code>. Missing or stale session cookies trigger instant HTTP 307 redirect to login with challenge-token clearance.
+          </p>
+</div>
+<div class="flex flex-col gap-2 pt-4 bg-surface-container-lowest/60 -mx-6 -mb-6 p-6 rounded-b-xl">
+<div class="flex items-center justify-between font-label-sm text-label-sm py-1">
+<span class="text-on-surface-variant">Auth Cookie Type</span>
+<span class="text-on-surface font-semibold">HttpOnly, Secure, SameSite=Strict</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm py-1">
+<span class="text-on-surface-variant">Token Invalidation Time</span>
+<span class="text-on-surface font-semibold">&lt; 12ms Edge Latency</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm py-1">
+<span class="text-on-surface-variant">Unauthorized Redirect</span>
+<span class="text-primary font-semibold">/admin/login?code=UNAUTHORIZED</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Active Admin Sessions & Hardware Key Access Control -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-6">
+<!-- Session Telemetry (8 Cols) -->
+<div class="xl:col-span-8 bg-surface-container-low rounded-xl p-6 shadow-xl flex flex-col gap-6">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">SESSION ACCESS TELEMETRY</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Authenticated Studio Sessions</h3>
+</div>
+<div class="flex items-center gap-2">
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm px-3 py-1.5 rounded transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px]">refresh</span> Refresh Audit
+            </button>
+<button class="bg-surface-variant hover:bg-error-container text-error hover:text-on-error font-label-sm text-label-sm px-3 py-1.5 rounded transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px]">power_settings_new</span> Revoke Other Sessions
+            </button>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Primary Current Session -->
+<div class="bg-surface-container p-4 rounded-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">laptop_mac</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface">Apple MacBook Pro 16" (M3 Max)</span>
+<span class="bg-primary text-on-primary font-label-sm text-label-sm px-1.5 py-0.5 rounded font-bold uppercase">THIS CONSOLE</span>
+</div>
+<div class="flex items-center gap-3 font-label-sm text-label-sm text-on-surface-variant mt-0.5">
+<span class="text-primary">157.49.208.114</span>
+<span>•</span>
+<span>Chennai, Tamil Nadu, India</span>
+<span>•</span>
+<span>Chrome 122.0.6261 (macOS 14.4)</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-outline">AUTHENTICATED VIA</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">WebAuthn FIDO2 Bio</span>
+</div>
+<button class="px-3 py-1.5 bg-surface-container-high text-on-surface-variant hover:text-on-surface rounded font-label-sm text-label-sm">Active Now</button>
+</div>
+</div>
+<!-- Secondary Production Mobile Session -->
+<div class="bg-surface-container/70 p-4 rounded-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">phone_iphone</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface">iPhone 15 Pro Max (Field Unit)</span>
+<span class="bg-surface-container-high text-secondary font-label-sm text-label-sm px-1.5 py-0.5 rounded font-semibold">STANDBY</span>
+</div>
+<div class="flex items-center gap-3 font-label-sm text-label-sm text-on-surface-variant mt-0.5">
+<span class="text-on-surface">49.204.142.92</span>
+<span>•</span>
+<span>Chennai Metro (AirTel 5G)</span>
+<span>•</span>
+<span>Safari Mobile 17.3</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-outline">LAST ACTIVE</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">27 mins ago</span>
+</div>
+<button class="px-3 py-1.5 bg-surface-container-high hover:bg-error/20 hover:text-error text-on-surface-variant rounded font-label-sm text-label-sm transition-colors">Revoke</button>
+</div>
+</div>
+<!-- Workstation Rig Session -->
+<div class="bg-surface-container/70 p-4 rounded-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">desktop_windows</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface">Studio Color Rig DaVinci Resolve OS</span>
+<span class="bg-surface-container-high text-secondary font-label-sm text-label-sm px-1.5 py-0.5 rounded font-semibold">OFFLINE</span>
+</div>
+<div class="flex items-center gap-3 font-label-sm text-label-sm text-on-surface-variant mt-0.5">
+<span class="text-on-surface">192.168.1.180 (Studio LAN)</span>
+<span>•</span>
+<span>Chennai Color Suite</span>
+<span>•</span>
+<span>Dedicated Media Agent</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-outline">LAST ACTIVE</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 hours ago</span>
+</div>
+<button class="px-3 py-1.5 bg-surface-container-high hover:bg-error/20 hover:text-error text-on-surface-variant rounded font-label-sm text-label-sm transition-colors">Revoke</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 2FA & Hardware Security (4 Cols) -->
+<div class="xl:col-span-4 bg-surface-container-low rounded-xl p-6 shadow-xl flex flex-col justify-between gap-6">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">HARDWARE CREDENTIAL</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">FIDO2 / PASSKEY</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">WebAuthn Multi-Factor</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Physical security keys eliminate session hijacking. All administrative mutations require biometric or hardware confirmation.
+          </p>
+<div class="flex flex-col gap-3 pt-2">
+<div class="bg-surface-container p-3 rounded flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px] text-primary">fingerprint</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">YubiKey 5C NFC</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Slot 1: Serial #9482180</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="bg-surface-container p-3 rounded flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px] text-secondary">security</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Touch ID Passkey</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Apple Secure Enclave (MacBook Pro)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+</div>
+<button class="w-full bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md py-3 rounded transition-colors flex items-center justify-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">add_moderator</span>
+<span>REGISTER NEW SECURITY KEY</span>
+</button>
+</div>
+</div>
+<!-- Database Row Level Security (RLS) Policy Inspector -->
+<div class="bg-surface-container-low rounded-xl p-6 shadow-xl flex flex-col gap-6">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest bg-surface-container px-2 py-0.5 rounded">RLS MATRIX</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">POSTGRES ENGINE: ACTIVE</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-1">Database Row Level Security Policy Inspector</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Granular evaluation rules compiled at Postgres level. Unauthenticated clients receive strict zero-leakage isolation.
+          </p>
+</div>
+<!-- Filter / Table Selector Chips -->
+<div class="flex items-center gap-2 overflow-x-auto pb-2 lg:pb-0">
+<button class="bg-surface-container text-primary font-label-sm text-label-sm px-3 py-1.5 rounded font-semibold whitespace-nowrap">
+            All Tables (8)
+          </button>
+<button class="bg-surface-container-high hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-3 py-1.5 rounded transition-colors whitespace-nowrap">
+            Public Readable (2)
+          </button>
+<button class="bg-surface-container-high hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-3 py-1.5 rounded transition-colors whitespace-nowrap">
+            Strict Classified (6)
+          </button>
+</div>
+</div>
+<!-- Inspector Table -->
+<div class="overflow-x-auto rounded-lg bg-surface-container-lowest shadow-sm">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container text-outline font-label-sm text-label-sm tracking-wider uppercase">
+<th class="py-3.5 px-4">Database Table</th>
+<th class="py-3.5 px-4">RLS Status</th>
+<th class="py-3.5 px-4">SELECT Policy (Public / Anon)</th>
+<th class="py-3.5 px-4">SELECT Policy (Superadmin)</th>
+<th class="py-3.5 px-4">MUTATION Scope (Insert/Update/Delete)</th>
+<th class="py-3.5 px-4 text-right">Audit</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface">
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-4 px-4 font-label-md text-label-md text-primary font-bold">films</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">lock</span> Enforced
+                </span>
+</td>
+<td class="py-4 px-4 text-on-surface-variant font-label-sm text-label-sm">
+<code class="text-secondary bg-surface-container px-1.5 py-0.5 rounded">status = 'published'</code>
+</td>
+<td class="py-4 px-4 font-label-sm text-label-sm text-on-surface">
+                Full Access (Drafts + Archive)
+              </td>
+<td class="py-4 px-4 font-label-sm text-label-sm text-primary">
+                Director Only (JWT: role='SUPERADMIN')
+              </td>
+<td class="py-4 px-4 text-right">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container/50 transition-colors bg-surface-container/20">
+<td class="py-4 px-4 font-label-md text-label-md text-primary font-bold">future_slate</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">lock</span> Enforced
+                </span>
+</td>
+<td class="py-4 px-4 text-on-surface-variant font-label-sm text-label-sm">
+<code class="text-secondary bg-surface-container px-1.5 py-0.5 rounded">is_public_teaser = true</code>
+</td>
+<td class="py-4 px-4 font-label-sm text-label-sm text-on-surface">
+                Full Production Roadmaps
+              </td>
+<td class="py-4 px-4 font-label-sm text-label-sm text-primary">
+                Director Only (JWT: role='SUPERADMIN')
+              </td>
+<td class="py-4 px-4 text-right">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-4 px-4 font-label-md text-label-md text-primary font-bold">media_assets</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">lock</span> Enforced
+                </span>
+</td>
+<td class="py-4 px-4 text-on-surface-variant font-label-sm text-label-sm">
+<code class="text-secondary bg-surface-container px-1.5 py-0.5 rounded">access_level = 'cdn_public'</code>
+</td>
+<td class="py-4 px-4 font-label-sm text-label-sm text-on-surface">
+                Raw 4K Masters + Uncompressed Audio
+              </td>
+<td class="py-4 px-4 font-label-sm text-label-sm text-primary">
+                Director Only (JWT: role='SUPERADMIN')
+              </td>
+<td class="py-4 px-4 text-right">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container/50 transition-colors bg-surface-container/20">
+<td class="py-4 px-4 font-label-md text-label-md text-error font-bold">social_tokens</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">shield_with_heart</span> Zero-Read
+                </span>
+</td>
+<td class="py-4 px-4 text-error font-label-sm text-label-sm font-bold">
+                BLOCKED (0 Records / 403 Forbidden)
+              </td>
+<td class="py-4 px-4 font-label-sm text-label-sm text-on-surface">
+                Private Server Vault Decryption
+              </td>
+<td class="py-4 px-4 font-label-sm text-label-sm text-primary">
+                Edge Service Role Only
+              </td>
+<td class="py-4 px-4 text-right">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-4 px-4 font-label-md text-label-md text-error font-bold">site_analytics</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">shield_with_heart</span> Zero-Read
+                </span>
+</td>
+<td class="py-4 px-4 text-error font-label-sm text-label-sm font-bold">
+                BLOCKED (Aggregated summaries only via RPC)
+              </td>
+<td class="py-4 px-4 font-label-sm text-label-sm text-on-surface">
+                Full Raw Visitor Telemetry
+              </td>
+<td class="py-4 px-4 font-label-sm text-label-sm text-primary">
+                Middleware Event Dispatcher
+              </td>
+<td class="py-4 px-4 text-right">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container/50 transition-colors bg-surface-container/20">
+<td class="py-4 px-4 font-label-md text-label-md text-secondary font-bold">project_inquiries</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">lock</span> Enforced
+                </span>
+</td>
+<td class="py-4 px-4 text-error font-label-sm text-label-sm">
+                INSERT Only (Rate limited 5/min)
+              </td>
+<td class="py-4 px-4 font-label-sm text-label-sm text-on-surface">
+                Read / Reply / Archive Workflows
+              </td>
+<td class="py-4 px-4 font-label-sm text-label-sm text-primary">
+                Director Only (JWT: role='SUPERADMIN')
+              </td>
+<td class="py-4 px-4 text-right">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-4 px-4 font-label-md text-label-md text-error font-bold">admin_users</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">lock</span> Enforced
+                </span>
+</td>
+<td class="py-4 px-4 text-error font-label-sm text-label-sm font-bold">
+                BLOCKED (0 Records / 403 Forbidden)
+              </td>
+<td class="py-4 px-4 font-label-sm text-label-sm text-on-surface">
+                Self Profile &amp; Audit Trail Read
+              </td>
+<td class="py-4 px-4 font-label-sm text-label-sm text-primary">
+                Director Only (Superadmin Passkey)
+              </td>
+<td class="py-4 px-4 text-right">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Live RLS Query Test Simulator Terminal -->
+<div class="bg-surface-container-lowest rounded-xl p-5 flex flex-col gap-4">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-error"></span>
+<span class="w-3 h-3 rounded-full bg-primary-container"></span>
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-outline tracking-wider ml-2 uppercase">LIVE ZERO-TRUST RLS QUERY SIMULATOR</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Simulating Public Anon Key: <code class="text-primary font-label-sm text-label-sm">anon_key_psk_pub_98a***</code></span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Test Target 1: Public attempting to fetch social_tokens -->
+<div class="bg-surface-container p-4 rounded-lg flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">TARGET: supabase.from('social_tokens').select('*')</span>
+<span class="font-label-sm text-label-sm bg-error-container text-on-error font-bold px-2 py-0.5 rounded">STATUS 403 // BLOCKED</span>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded font-label-sm text-label-sm text-on-surface-variant flex flex-col gap-1">
+<span class="text-secondary">&gt; EXECUTING WITH ROLE: anon</span>
+<span class="text-error">&gt; ERROR: 42501 permission denied for table social_tokens</span>
+<span class="text-outline">&gt; ROWS RETURNED: 0 | LEAKAGE DETECTED: NO</span>
+</div>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>Latency: 4.1ms</span>
+<span class="text-primary font-semibold">Passed Policy Check</span>
+</div>
+</div>
+<!-- Test Target 2: Public attempting to fetch site_analytics -->
+<div class="bg-surface-container p-4 rounded-lg flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">TARGET: supabase.from('site_analytics').select('raw_ip')</span>
+<span class="font-label-sm text-label-sm bg-error-container text-on-error font-bold px-2 py-0.5 rounded">EMPTY SET // 0 RECORDS</span>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded font-label-sm text-label-sm text-on-surface-variant flex flex-col gap-1">
+<span class="text-secondary">&gt; EXECUTING WITH ROLE: anon</span>
+<span class="text-primary">&gt; 200 OK (Postgres Filter: RLS policy evaluated empty set)</span>
+<span class="text-outline">&gt; ROWS RETURNED: 0 | PII PROTECTED: YES</span>
+</div>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>Latency: 3.8ms</span>
+<span class="text-primary font-semibold">Passed Policy Check</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Navigation & Admin Action Deck -->
+<div class="bg-surface-container-low rounded-xl p-6 shadow-xl flex flex-col gap-6 mb-4">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">CREATOR STUDIO DECK</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Director Quick Actions &amp; Navigation</h3>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Action 1: Film Slate Manager -->
+<a class="bg-surface-container hover:bg-surface-container-high p-5 rounded-lg flex flex-col justify-between gap-4 transition-all group shadow-sm" href="#">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">movie_edit</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">arrow_forward</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors font-semibold">Film Slate Manager</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Deploy releases, drafts, and festival cuts.</span>
+</div>
+</a>
+<!-- Action 2: Social Telemetry Hub -->
+<a class="bg-surface-container hover:bg-surface-container-high p-5 rounded-lg flex flex-col justify-between gap-4 transition-all group shadow-sm" href="#">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">insights</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">arrow_forward</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors font-semibold">Telemetry &amp; Audience</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Cross-platform engagement &amp; site funnel analytics.</span>
+</div>
+</a>
+<!-- Action 3: Media S3 Dropzone -->
+<a class="bg-surface-container hover:bg-surface-container-high p-5 rounded-lg flex flex-col justify-between gap-4 transition-all group shadow-sm" href="#">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">cloud_upload</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">arrow_forward</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors font-semibold">Media S3 Dropzone</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Direct uncompressed 4K master asset ingest.</span>
+</div>
+</a>
+<!-- Action 4: Database Schema Export -->
+<a class="bg-surface-container hover:bg-surface-container-high p-5 rounded-lg flex flex-col justify-between gap-4 transition-all group shadow-sm" href="#">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">database</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">download</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors font-semibold">Database Schema Export</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Dump Supabase SQL definitions &amp; migration tags.</span>
+</div>
+</a>
+</div>
+</div>
+</div>
+<!-- Inline Script for Session TTL micro-countdown & lock action -->
+<script>
+    (function() {
+      let secondsRemaining = 14 * 60 + 52;
+      const display = document.getElementById('session-countdown');
+      const lockBtn = document.getElementById('lock-console-btn');
+
+      const timer = setInterval(() => {
+        if (secondsRemaining <= 0) {
+          clearInterval(timer);
+          if (display) display.textContent = "00:00 - LOCKED";
+          return;
+        }
+        secondsRemaining--;
+        const mins = Math.floor(secondsRemaining / 60);
+        const secs = secondsRemaining % 60;
+        if (display) {
+          display.textContent = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+        }
+      }, 1000);
+
+      if (lockBtn) {
+        lockBtn.addEventListener('click', () => {
+          lockBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span>LOCKING CONSOLE...</span>';
+          setTimeout(() => {
+            alert('Admin Console Locked. Session destroyed from Edge Middleware.');
+            if (display) display.textContent = "00:00 - LOCKED";
+            lockBtn.textContent = 'CONSOLE LOCKED';
+            lockBtn.classList.add('opacity-60', 'pointer-events-none');
+          }, 600);
+        });
+      }
+    })();
+  </script>
+</div></main></div></body></html>
